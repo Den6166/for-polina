@@ -1239,6 +1239,7 @@ function openLightbox(i) {
   lbIndex = i;
   lbImg.src = photos[i].src;
   lb.classList.add('open');
+  document.getElementById('page-1').scrollIntoView({ behavior: 'smooth' });
 }
 function closeLightbox() { lb.classList.remove('open'); lbImg.src = ''; }
 
@@ -1355,6 +1356,7 @@ function openLetter() {
   const env  = document.getElementById('env3d');
   const hint = document.getElementById('envHint');
   if (!env) return;
+  document.getElementById('page-4').scrollIntoView({ behavior: 'smooth' });
   env.style.pointerEvents = 'none';
   env.style.animation     = 'none';
   env.style.transform     = 'translateX(-50%)';
